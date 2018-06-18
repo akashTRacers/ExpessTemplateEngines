@@ -1,0 +1,45 @@
+head
+  title Title
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/spectre.css/0.5.1/spectre.min.css')
+  style.
+    body {
+    background: #e7e9ed;
+    font-size: 16pt;
+    color: #454d5d;
+    padding-left: 1em;
+    }
+    centerframe {
+    margin-left: 3000px;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+    align-items: center;
+    }
+// navbar header
+header.navbar
+  section.navbar-section
+    a.btn.btn-link(href='/insert1.html') Create
+    a.btn.btn-link(href='#') Docs
+    a.btn.btn-link(href='https://github.com/') GitHub
+  section.navbar-section
+    .input-group.input-inline
+      input.form-input(type='text' placeholder='search')
+      button.btn.btn-primary.input-group-btn Search
+#app
+  h2 Welcome to page 
+  // card example
+  // using flexbox layout system
+  .card.column.col-4
+    .card-header
+      h4.card-title TechRacers
+      h6.card-subtitle Bringing Technology in Life
+    .card-body
+      | Good friends, good books, and a sleepy conscience: this is the ideal life
+  br
+
+  h1 #{title}
+  ul
+    each article, i in articles1
+      li
+        p #{article}
